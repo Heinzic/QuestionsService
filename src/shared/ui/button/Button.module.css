@@ -1,0 +1,115 @@
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    font-weight: 600;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 2px solid transparent;
+    position: relative;
+    font-family: inherit;
+  }
+  
+  .button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .primary {
+    background-color: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+  }
+  
+  .primary:hover:not(:disabled) {
+    background-color: #5a09e6;
+    border-color: #5a09e6;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(106, 11, 255, 0.3);
+  }
+  
+  .primary:active:not(:disabled) {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(106, 11, 255, 0.2);
+  }
+  
+  .outline {
+    background-color: white;
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+  }
+  
+  .outline:hover:not(:disabled) {
+    background-color: var(--color-primary);
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(106, 11, 255, 0.2);
+  }
+  
+  .outline:active:not(:disabled) {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(106, 11, 255, 0.15);
+  }
+  
+  .sm {
+    padding: var(--spacing-xs) var(--spacing-md);
+    font-size: 14px;
+  }
+  
+  .md {
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: 16px;
+  }
+  
+  .lg {
+    padding: var(--spacing-md) var(--spacing-lg);
+    font-size: 18px;
+  }
+  
+  .fullWidth {
+    width: 100%;
+  }
+  
+  .loading {
+    pointer-events: none;
+  }
+  
+  .content {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+  }
+  
+  .spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid transparent;
+    border-top-color: currentColor;
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .sm {
+      padding: var(--spacing-xs) var(--spacing-sm);
+      font-size: 13px;
+    }
+    
+    .md {
+      padding: var(--spacing-sm) var(--spacing-md);
+      font-size: 15px;
+    }
+    
+    .lg {
+      padding: var(--spacing-sm) var(--spacing-md);
+      font-size: 16px;
+    }
+  }

@@ -1,0 +1,129 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .logoContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .logo {
+    height: 40px;
+    width: auto;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+  }
+  
+  .logo:hover {
+    opacity: 0.8;
+  }
+  
+  .logoText {
+    font-weight: bold;
+    font-size: 32px;
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navList {
+    display: flex;
+    list-style: none;
+    gap: var(--spacing-lg);
+  }
+  
+  .navItem {
+    margin: 0;
+  }
+  
+  .navLink {
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 16px;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--radius-sm);
+    transition: all 0.2s ease;
+    position: relative;
+  }
+  
+  .navLink:hover {
+    color: var(--color-primary);
+    background-color: var(--color-bg);
+    border-radius: var(--radius-lg);
+  }
+  
+  .loginLink {
+    color: var(--color-primary);
+    font-size: 16px;
+    text-decoration: none;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--radius-sm);
+    transition: all 0.2s ease;
+    position: relative;
+  }
+  
+  .loginLink:hover {
+    background-color: var(--color-bg);
+    transform: scale(0.98);
+    border-radius: var(--radius-lg);
+  }
+  
+  .authBlock {
+    display: flex;
+    gap: var(--spacing-md);
+  }
+
+  /* немного повысил специфичность, чтобы перетереть базовые паддинги в кнопке */
+  .authBlock .registerButton {
+    padding: var(--spacing-sm) var(--spacing-lg);
+  }
+
+  @media (max-width: 1024px) {
+    .header {
+      padding: var(--spacing-md) var(--spacing-md);
+    }
+    
+    .navList {
+      gap: var(--spacing-md);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .header {
+      padding: var(--spacing-sm) var(--spacing-md);
+    }
+    
+    .logo {
+      height: 32px;
+    }
+    
+    .navList {
+      gap: var(--spacing-sm);
+    }
+    
+    .navLink {
+      font-size: 14px;
+      padding: var(--spacing-xs) var(--spacing-sm);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .navList {
+      gap: var(--spacing-xs);
+    }
+    
+    .navLink {
+      font-size: 12px;
+      padding: var(--spacing-xs);
+    }
+  }
