@@ -1,6 +1,6 @@
-import { Card } from "../../shared/ui/card";
 import { Container } from "../../shared/ui/container";
 import { Header } from "../../widgets";
+import { QuestionsList } from "../../widgets/questions-list";
 import styles from './PublicQuestionsPage.module.css'
 
 const PublicQuestionsPage = () => {
@@ -11,12 +11,7 @@ const PublicQuestionsPage = () => {
             </Container>
             <main className={styles.content}>
                 <Container>
-                    <Card>
-                        <h1>Hello</h1>
-                    </Card>
-                    <Card>
-                        <h1>Hello</h1>
-                    </Card>
+                    <QuestionsList/>
                 </Container>
             </main>
         </>

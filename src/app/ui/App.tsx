@@ -5,7 +5,7 @@ const PublicQuestionsPage = lazy(() => import("../../pages/public-questions-page
 function App() {
   return (
     <>
-        <PublicQuestionsPage />
+      <PublicQuestionsPage />
     </>
   )
 }
