@@ -1,20 +1,20 @@
 :root {
     /* Цвета */
-    --color-primary: #6A0BFF;
-    
+    --color-primary: #6a0bff;
+
     /* Текст */
     --color-text: #191919;
-    
+
     /* Фон */
-    --color-bg: #F4F4F4;
-    
+    --color-bg: #f4f4f4;
+
     /* Отступы */
     --spacing-xs: 4px;
     --spacing-sm: 8px;
     --spacing-md: 16px;
     --spacing-lg: 20px;
     --spacing-xl: 24px;
-    
+
     /* Скругления */
     --radius-sm: 4px;
     --radius-md: 8px;

@@ -1,4 +1,4 @@
 // Тэги для API
 export const API_TAGS = {
-    Question: 'Questions'
-} as const;
+    Question: 'Questions',
+} as const

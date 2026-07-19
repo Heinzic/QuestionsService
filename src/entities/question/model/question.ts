@@ -1,9 +1,9 @@
-import type { NestedSkill } from "../../skill";
-import type { NestedSpecialization } from "../../specialization";
-import type { NestedTopic } from "../../topic";
-import type { NestedUserReference } from "../../user";
+import type { NestedSkill } from '../../skill'
+import type { NestedSpecialization } from '../../specialization'
+import type { NestedTopic } from '../../topic'
+import type { NestedUserReference } from '../../user'
 
-export type Status =  "public" | "draft";
+export type Status = 'public' | 'draft'
 
 export interface Question {
     id: number

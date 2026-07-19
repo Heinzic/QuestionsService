@@ -1,4 +1,4 @@
-import type { Question } from "../.."
+import type { Question } from '../..'
 
 export interface PublicQuestionsResponse {
     total: number
@@ -8,14 +8,14 @@ export interface PublicQuestionsResponse {
 }
 
 export interface GetPublicQuestionsParams {
-    page?: number;
-    limit?: number;
+    page?: number
+    limit?: number
     title?: string
     titleOrDescription?: string
     skills?: string[]
     skillFilterMode?: string
     topics?: string[]
-    complexity?: number[];
+    complexity?: number[]
     collection?: number
     rate?: number[]
     keywords?: string[]
@@ -23,7 +23,7 @@ export interface GetPublicQuestionsParams {
     specializationSlug?: string
     createdAtFrom?: Date
     createdAtTo?: Date
-    orderBy?: 'createdAt' | 'title' | 'rate' | 'complexity' | 'createdById';
-    order?: 'ACS' | 'DESC';
+    orderBy?: 'createdAt' | 'title' | 'rate' | 'complexity' | 'createdById'
+    order?: 'ACS' | 'DESC'
     random?: boolean
-  }
+}

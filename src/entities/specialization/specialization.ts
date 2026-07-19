@@ -1,4 +1,4 @@
-import type { NestedUserReference } from "../user"
+import type { NestedUserReference } from '../user'
 
 export interface NestedSpecialization {
     id: number

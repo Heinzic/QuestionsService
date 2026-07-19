@@ -1,0 +1,24 @@
+.badge {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    background-color: var(--color-bg);
+    border-radius: var(--radius-lg);
+    width: fit-content;
+    display: flex;
+    gap: var(--spacing-md);
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.value {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 2px 4px;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    font-size: 16px;
+}

@@ -1,13 +1,15 @@
-import { lazy } from "react"
+import { lazy } from 'react'
 
-const PublicQuestionsPage = lazy(() => import("../../pages/public-questions-page/PublicQuestionsPage")) 
+const PublicQuestionsPage = lazy(
+    () => import('../../pages/public-questions-page/PublicQuestionsPage')
+)
 
 function App() {
-  return (
-    <>
-      <PublicQuestionsPage />
-    </>
-  )
+    return (
+        <>
+            <PublicQuestionsPage />
+        </>
+    )
 }
 
 export default App

@@ -1,4 +1,17 @@
 .content {
     background-color: var(--color-bg);
     background-size: 100%;
+    padding-top: 40px;
+}
+
+@media (max-width: 1024px) {
+    .content {
+        padding-top: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .content {
+        padding-top: 20px;
+    }
 }

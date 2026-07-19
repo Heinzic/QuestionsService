@@ -1,27 +1,27 @@
-import type { ButtonHTMLAttributes, ReactNode } from 'react';
-import styles from './Button.module.css';
+import type { ButtonHTMLAttributes, ReactNode } from 'react'
+import styles from './Button.module.css'
 
-type ButtonVariant = 'primary' | 'outline';
-type ButtonSize = 'sm' | 'md' | 'lg';
+type ButtonVariant = 'primary' | 'outline'
+type ButtonSize = 'sm' | 'md' | 'lg'
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: ButtonVariant;
-  size?: ButtonSize;
-  children: ReactNode;
-  isLoading?: boolean;
-  fullWidth?: boolean;
+    variant?: ButtonVariant
+    size?: ButtonSize
+    children: ReactNode
+    isLoading?: boolean
+    fullWidth?: boolean
 }
 
 export const Button = ({
-        variant = 'primary',
-        size = 'md',
-        children,
-        isLoading = false,
-        fullWidth = false,
-        disabled,
-        className,
-        ...props
-    }: ButtonProps) => {
+    variant = 'primary',
+    size = 'md',
+    children,
+    isLoading = false,
+    fullWidth = false,
+    disabled,
+    className,
+    ...props
+}: ButtonProps) => {
     const buttonClasses = [
         styles.button,
         styles[variant],
@@ -31,16 +31,16 @@ export const Button = ({
         className || '',
     ]
         .filter(Boolean)
-        .join(' ');
+        .join(' ')
 
-  return (
-    <button
-      className={buttonClasses}
-      disabled={disabled || isLoading}
-      {...props}
-    >
-      {isLoading && <span className={styles.spinner}></span>}
-      <span className={styles.content}>{children}</span>
-    </button>
-  );
-};
+    return (
+        <button
+            className={buttonClasses}
+            disabled={disabled || isLoading}
+            {...props}
+        >
+            {isLoading && <span className={styles.spinner}></span>}
+            <span className={styles.content}>{children}</span>
+        </button>
+    )
+}

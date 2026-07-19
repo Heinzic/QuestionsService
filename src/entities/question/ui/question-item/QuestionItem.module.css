@@ -1,0 +1,32 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.title {
+    font-weight: 500;
+    flex: 1;
+}
+
+.title::before {
+    content: '•';
+    color: var(--color-primary);
+    font-size: 1.5em;
+}
+
+.arrow {
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+}
+
+.arrowOpen {
+    transform: rotate(180deg);
+}
+
+.content {
+    margin-top: var(--spacing-md);
+    padding-top: var(--spacing-md);
+    border-top: 1px solid #e8e8e8;
+}
