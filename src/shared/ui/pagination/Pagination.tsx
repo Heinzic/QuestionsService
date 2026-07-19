@@ -29,13 +29,14 @@ export const Pagination = ({
     })
 
     return (
-        <div>
+        <nav aria-label="Пагинация">
             <Flex gap="md" direction="row" className={className}>
                 <Button
                     onClick={handlePreviousPage}
                     disabled={currentPage === 1}
+                    className={styles.navButton}
                 >
-                    {'←'}
+                    ←
                 </Button>
 
                 <ul className={styles.list}>
@@ -48,19 +49,13 @@ export const Pagination = ({
                             )
                         }
 
-                        // Номер страницы
                         const isActive = item === currentPage
 
                         return (
                             <li key={i}>
                                 <button
-                                    className={
-                                        isActive
-                                            ? styles.active
-                                            : styles.pageButton
-                                    }
+                                    className={`${styles.pageButton} ${isActive ? styles.active : ''}`}
                                     onClick={() => handlePageClick(item)}
-                                    aria-current={isActive ? 'page' : undefined}
                                 >
                                     {item}
                                 </button>
@@ -72,10 +67,11 @@ export const Pagination = ({
                 <Button
                     onClick={handleNextPage}
                     disabled={currentPage === totalPages}
+                    className={styles.navButton}
                 >
-                    {'→'}
+                    →
                 </Button>
             </Flex>
-        </div>
+        </nav>
     )
 }

@@ -24,9 +24,8 @@ export const getPaginationRange = ({
     // Всегда добавляем первую страницу
     paginationResult.push(1)
 
-    // Если текущая страница в первых 4
     if (currentPage <= paginationLimit) {
-        for (let i = 2; i <= paginationLimit + 1; i++) {
+        for (let i = 2; i <= paginationLimit + 3; i++) {
             paginationResult.push(i)
         }
 
@@ -36,10 +35,8 @@ export const getPaginationRange = ({
     }
     // Если текущая страница близко к концу
     else if (currentPage >= totalPages - paginationLimit) {
-        // Добавляем многоточие после первой
         paginationResult.push('...')
 
-        // Добавляем последние 6 страниц
         for (let i = totalPages - paginationLimit; i <= totalPages; i++) {
             paginationResult.push(i)
         }
@@ -49,13 +46,12 @@ export const getPaginationRange = ({
         // Добавляем многоточие после первой
         paginationResult.push('...')
 
-        // Добавляем current-2, current-1, current, current+1, current+2
         for (
             let i = currentPage - paginationLimit;
-            i <= currentPage + paginationLimit;
+            i < currentPage + paginationLimit + 1;
             i++
         ) {
-            paginationResult.push(i)
+            if (i !== 1) paginationResult.push(i)
         }
 
         // Добавляем многоточие перед последней

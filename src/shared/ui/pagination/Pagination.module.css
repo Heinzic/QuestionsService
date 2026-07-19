@@ -1,7 +1,6 @@
-/* Pagination.module.css */
-
 .list {
     display: flex;
+    align-items: center;
     gap: var(--spacing-xs);
     list-style: none;
     margin: 0;
@@ -9,30 +8,69 @@
 }
 
 .pageButton {
-    min-width: 32px;
+    width: 32px;
     height: 32px;
-    padding: 0 var(--spacing-sm);
-    border: 1px solid var(--color-border, #e0e0e0);
+    padding: 0;
+    border: none;
     border-radius: var(--radius-sm);
-    background: white;
+    background: transparent;
+    color: var(--color-text);
+    font-size: 14px;
+    font-weight: 500;
     cursor: pointer;
-    transition: all 0.2s;
+    transition: background-color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .pageButton:hover {
-    border-color: var(--color-primary);
+    background-color: var(--color-bg-light, #f5f5f5);
 }
 
 .active {
     background-color: var(--color-primary);
     color: white;
-    border-color: var(--color-primary);
+    font-weight: 600;
+}
+
+.active:hover {
+    background-color: var(--color-primary);
 }
 
 .dots {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 32px;
-    color: var(--color-text-light);
+    width: 32px;
+    height: 32px;
+    color: var(--color-text);
+    font-size: 14px;
+}
+
+.navButton {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    border-radius: 50%;
+    border: 1.5px solid var(--color-primary);
+    background: transparent;
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 14px;
+}
+
+.navButton:hover:not(:disabled) {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.navButton:disabled {
+    border-color: var(--color-text);
+    color: var(--color-text);
+    cursor: not-allowed;
 }
