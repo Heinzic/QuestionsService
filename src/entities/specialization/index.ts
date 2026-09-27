@@ -1,1 +1,1 @@
-export * from './specialization'
+export type { NestedSpecialization } from './model'

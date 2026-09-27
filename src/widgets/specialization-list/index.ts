@@ -1,0 +1,1 @@
+export { SpecializationList } from './ui'
