@@ -51,9 +51,6 @@ export const QuestionItem = ({
                                     title="Сложность"
                                 />
                             </Flex>
-                            {/* Как правильно сюда вставить html с сервера без сторонних библиотек? 
-                                Как будто такая вставка не очень хорошая, если про XSS атаки думать 
-                            */}
                             <div
                                 dangerouslySetInnerHTML={{
                                     __html: question.longAnswer ?? '',

@@ -5,11 +5,12 @@ interface SpecializationChipProps {
     title: string
     isSelected: boolean
     onClick: () => void
+    className?: string
 }
 
-export const SpecializationChip = memo(({ title, isSelected, onClick }: SpecializationChipProps) => {
+export const SpecializationChip = memo(({ title, isSelected, onClick, className }: SpecializationChipProps) => {
     return (
-        <Button variant={isSelected ? 'outline' : 'primary'} onClick={onClick}>
+        <Button className={className} variant={isSelected ? 'primary' : 'outline'} onClick={onClick}>
             {title}
         </Button>
     )

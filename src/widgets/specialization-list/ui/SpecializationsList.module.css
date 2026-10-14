@@ -1,0 +1,14 @@
+.specCard {
+    max-width: 30%;
+}
+
+.filterItem {
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: 1px solid rgb(186, 186, 186);
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 120%;
+    cursor: pointer;
+    transition: all 0.2s;
+}

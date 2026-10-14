@@ -1,6 +1,6 @@
 import { Container } from '../../shared/ui/container'
 import { Flex } from '../../shared/ui/flex'
-import { Header, SpecializationList } from '../../widgets'
+import { Header, SidebarFilters } from '../../widgets'
 import { QuestionsList } from '../../widgets/questions-list'
 import styles from './PublicQuestionsPage.module.css'
 
@@ -11,14 +11,12 @@ const PublicQuestionsPage = () => {
                 <Header />
             </Container>
             <main className={styles.content}>
-                <Flex>
-                    <Container>
+                <Container>
+                    <Flex>
                         <QuestionsList />
-                    </Container>
-                    <Container>
-                        <SpecializationList selectedId={11} onClick={() => { }} />
-                    </Container>
-                </Flex>
+                        <SidebarFilters />
+                    </Flex>
+                </Container>
             </main>
         </>
     )
