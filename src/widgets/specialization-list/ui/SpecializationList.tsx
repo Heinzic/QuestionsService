@@ -12,8 +12,6 @@ interface SpecializationListProps {
 export const SpecializationList = ({ selectedIds, onClick }: SpecializationListProps) => {
     const { data, isLoading, isError } = useGetAllSpecializationsQuery({})
 
-    console.log(selectedIds);
-
     if (isLoading) return <div className="">Загрузка...</div>
     if (isError) return <div className="">Ошибка загрузки</div>
     return (
