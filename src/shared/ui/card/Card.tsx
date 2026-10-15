@@ -8,6 +8,7 @@ export interface CardProps extends HTMLAttributes<HTMLDivElement> {
     padding?: CardPadding
     hoverable?: boolean
     clickable?: boolean
+    fullWidth?: boolean
 }
 
 export const Card = ({
@@ -15,6 +16,7 @@ export const Card = ({
     padding = 'md',
     hoverable = false,
     clickable = false,
+    fullWidth = false,
     className,
     onClick,
     ...props
@@ -24,6 +26,7 @@ export const Card = ({
         styles[padding],
         hoverable && styles.hoverable,
         clickable && styles.clickable,
+        fullWidth && styles.fullWidth,
         className,
     ]
         .filter(Boolean)

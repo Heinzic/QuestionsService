@@ -39,7 +39,7 @@ export const QuestionsList = () => {
             </Card>
         )
     return (
-        <Card>
+        <Card fullWidth>
             <h1>Вопросы React, JavaScript</h1>
             <Flex direction="column" gap="md">
                 <div>
